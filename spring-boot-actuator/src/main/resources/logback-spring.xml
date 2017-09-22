@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration scan="true" scanPeriod="30 seconds">
+
+	<!-- Include default spring-boot config -->
+	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
+
+	<include resource="logback/console.xml" />
+	<include resource="logback/file.xml" />
+
+	<logger name="com.pgrabarczyk.spring.boot.actuator" level="DEBUG" />
+
+	<root level="INFO">
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</root>
+
+</configuration>
